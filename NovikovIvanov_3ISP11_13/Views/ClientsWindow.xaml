@@ -1,0 +1,24 @@
+﻿<Window x:Class="NovikovIvanov_3ISP11_13.Views.ClientsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NovikovIvanov_3ISP11_13.Views"
+        mc:Ignorable="d"
+        Title="Клиенты" Height="540" Width="960">
+    <Grid>
+        <DataGrid x:Name="ClientsGrid" ItemsSource="{Binding Clients}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Имя"  Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday}"/>
+                <DataGridTextColumn Header="Дата регистрации" Binding="{Binding RegistrationDate}"/>
+                <DataGridTextColumn Header="Электронная почта" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="Пол" Binding="{Binding GenderCode}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
